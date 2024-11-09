@@ -263,6 +263,7 @@ public:
         }
 
     }
+//operator overloading
     friend istream&operator>>(istream&input,Sll&element)
     {
         T value;
@@ -306,47 +307,7 @@ public:
     }
 
 };
-/*int main()
-{
-    Sll <int>s;
-    s.traverse();
-    cout<<"\nAppend element ----------\n";
-    s.Append(10);
-    s.Append(5);
-    s.Append(1);
-    s.Append(100);
-    s.traverse();
-    cout<<"\ninsert from begin element ----------\n";
-    s.insert_begin(9);
-    s.traverse();
-    cout<<"\ninsert from position element ----------\n";
-    s.insert_from_position(4,50);
-    s.traverse();
-    cout<<"\nsearch element ----------\n";
-    s.search_element(3)?cout<<"found\n":cout<<"Unfound\n";
-    cout<<"\nsize of element ----------\n";
-    cout<< s.get_size();
-    cout<<"\nreverse element ----------\n";
-    // s.traverse();
-    s.reverse_list();
-    s.traverse();
-    // cout<<"\ncleard element ----------\n";
-  //  s.clear_list();
-    //  s.traverse();
-    cout<<"\ndelete last element ----------\n";
-    s.Append(0);
-    // s.delete_from_position(1);
-    // s.insert_from_position(3,9);
-    // s.traverse();
-    cin>>s;
-    cout<<s;
-     Sll <int>s1;
-     cout<<s1<<endl;
-     s1=s;
-     cout<<s1;
-    return 0;
-}
-*/
+
 
 
 #endif // LINKED_LIST_H_INCLUDED
