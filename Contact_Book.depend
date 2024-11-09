@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1730983078 source:e:\codes\big_projects\contact_book\main.cpp
+	<iostream>
+	<algorithm>
+	<stdexcept>
+	<fstream>
+	<iomanip>
+	<string>
+	"Linked_List.h"
+
+1730919002 e:\codes\big_projects\contact_book\linked_list.h
+	<iostream>
+
+1730983078 source:e:\codes\big_projects\contact book\contact_book_in_one_file\main.cpp
+	<iostream>
+	<algorithm>
+	<stdexcept>
+	<fstream>
+	<iomanip>
+	<string>
+	"Linked_List.h"
+
+1730919002 e:\codes\big_projects\contact book\contact_book_in_one_file\linked_list.h
+	<iostream>
+
