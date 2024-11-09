@@ -71,7 +71,7 @@ public:
 
     friend ostream & operator<<(ostream & output, const Address & addr)
     {
-        output<< addr.streetnum<<" "<< addr.streetname<<" "<<addr.town<<" "<<left<<setw(7)<< addr.state<<" ";
+        output<<left<<setw(3)<< addr.streetnum<<" "<<left<<setw(9)<< addr.streetname<<" "<<left<<setw(9)<<addr.town<<" "<<left<<setw(8)<< addr.state<<" ";
         return output;
     }
 
@@ -339,7 +339,7 @@ public:
                 check=0;
            input >> p.num_phone;
             if(p.num_phone>2||p.num_phone<1){
-                cout<<"Maximum 2 Phones ! Try again ... \n";
+                cout<<"Only One Phone or Two ! Try again ... \n";
                 check=1;
             }
         }while(check);
@@ -367,7 +367,7 @@ public:
                 check=0;
             input >> p.num_mail;
             if(p.num_mail>2||p.num_mail<1){
-                cout<<"Maximum 2 Emails ! Try again ... \n";
+                cout<<"Only One Email or Two ! Try again ... \n";
                 check=1;
             }
         }while(check);
@@ -419,13 +419,18 @@ public:
         output<<left<<setw(10);
         if(p.fav==1) output<<"YES";
         else output<<"NO";
-        output<<p.address;
+        //--------------------------------
+
+
+
+
+        output<<p.address;//30
         if(p.num_phone==2)
-            output<<left<<setw(5)<<" "<<right<<setw(12)<<p.phone[0]<<", "<<left<<setw(13)<<p.phone[1];
-        else output<<left<<setw(25)<<p.phone[0];
+            output<<left<<setw(12)<<p.phone[0]<<" , "<<left<<setw(13)<<p.phone[1];
+        else output<<left<<setw(28)<<p.phone[0];
         if(p.num_mail==2)
-            output<<right<<setw(14)<<p.mail[0]<<", "<<left<<setw(12)<<p.mail[1];
-        else output<<right<<setw(26)<<p.mail[0];
+            output<<left<<setw(10)<<p.mail[0]<<", "<<left<<setw(25)<<p.mail[1];
+        else output<<left<<setw(40)<<p.mail[0];
 
         cout<<"\n-----------------------------------------------------------------------------------------------------------------------------------------------------------"<<endl;
 
@@ -537,8 +542,8 @@ void title_print()
     cout<<"\t----Contacts Information----\n";
     cout<<"\t\t\t\t\t------------------------------------------------------------------\n\n";
     cout<<left<<setw(5)<<"ID"<<left<<setw(10)<<"FName"<<left<<setw(10)<<"LName"<<left<<setw(20)<<"Classification";
-    cout<<left<<setw(14)<<"Fav"<<left<<setw(26)<<"Address";
-    cout<<left<<setw(32)<<"Phones Number"<<left<<setw(20)<<"Emails";
+    cout<<left<<setw(17)<<"Fav"<<left<<setw(30)<<"Address";
+    cout<<left<<setw(25)<<"Phones Number"<<left<<setw(5)<<"Emails";
     cout<<"\n-----------------------------------------------------------------------------------------------------------------------------------------------------------\n";
 
 }
